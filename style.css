@@ -330,9 +330,13 @@ main {
   background: var(--onyx);
   font-size: var(--fs-8);
   font-weight: var(--fw-300);
-  width: max-content;
+  width: auto;
+  max-width: 240px;
   padding: 3px 12px;
   border-radius: 8px;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.4;
 }
 
 .info_more-btn {
@@ -723,27 +727,22 @@ main {
 }
 
 .clients-item {
-  width: 150px;               /* fixed width to keep logos same size */
-  height: 130px;               /* fixed height for alignment */
+  width: 160px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 0 0 auto;
 }
 
 .clients-item img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  width: 150px;          /* force same width */
+  height: 360px;          /* force same height */
+  object-fit: contain;   /* keeps logo proportions */
 }
-
 
 .clients-item img:hover {
   transform: scale(1.05);
 }
-
-
-
 
 
 /*-----------------------------------*\
@@ -813,6 +812,23 @@ main {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+}
+
+.resume-bullets {
+  margin-top: 8px;
+  padding-left: 20px;
+  color: var(--light-gray);
+  list-style: disc;
+}
+
+.resume-bullets li {
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+.resume-bullets li strong {
+  color: var(--white-2);
+  font-weight: var(--fw-500);
 }
 
 
@@ -1017,6 +1033,7 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
 }
+
 
 
 
